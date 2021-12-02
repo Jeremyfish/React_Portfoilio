@@ -1,0 +1,8 @@
+.btn {
+    @include base-btn();
+}
+
+.btn-submit {
+    @include base-btn();
+    border-radius: 5px;
+}

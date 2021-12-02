@@ -5,25 +5,21 @@ import {
   Route
 } from "react-router-dom";
 import axios from "axios";
+
 import PortfolioContainer from "./portfolio/portfolio-container";
 import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
-import BlogDetail from "./pages/blog-detail";
 import PortfolioDetail from "./portfolio/portfolio-detail";
 import PortfolioManager from "./pages/portfolio-manager";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
-import Icons from "../helpers/icon";
-
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-
-    Icons();
 
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN"
@@ -86,7 +82,7 @@ export default class App extends Component {
 
   authorizedRoutes() {
     return [
-      <Route key = "portfolio-manager" path="/portfolio-manager" component={PortfolioManager} />
+      <Route key="portfolio-manager" path="/portfolio-manager" component={PortfolioManager} />
     ]
   }
 
@@ -124,8 +120,6 @@ export default class App extends Component {
             <Route path="/contact" component={Contact} />
 
             <Route path="/blog" component={Blog} />
-     
-            <Route path="/b/:slug" component={BlogDetail} />
 
             {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedRoutes() : null}
 

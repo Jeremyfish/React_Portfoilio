@@ -1,0 +1,11 @@
+.blog-form{
+    @include base-grid();
+    grid-template-columns: 1fr;
+    padding: 20px;
+
+    @include input-element();
+    input {
+        margin-bottom: 0px;
+    }
+
+}
