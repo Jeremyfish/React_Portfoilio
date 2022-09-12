@@ -31,6 +31,11 @@
         flex-direction: column;
         width: 800px;
 
+        .content   {
+            font-weight: bold;
+
+        }
+        
         a {
             text-decoration: none;
             color: $lime;
@@ -38,13 +43,17 @@
             text-shadow: 5px 3px 13px #000000;
 
             &:hover {
-                color: $green;
-                text-shadow: 3px 0px 13px #000000;
+                color: black;
+                text-shadow: 5px 3px 13px $green;
             }
         }
 
         h1 {
             font-size: 1.5em;
+        }
+
+            
+             
         }
 
         .featured-image-wrapper {
@@ -57,4 +66,3 @@
             }
         }
     }
-}
