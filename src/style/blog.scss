@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: $grey;
+    background-color: white;
 
 
 
@@ -17,7 +17,7 @@
        a {
            font-size: 3em;
            cursor: pointer;
-           color: $lime;
+           color: black;
            margin-right: 15px;
            transition: 0.5s ease-in-out;
            
@@ -40,13 +40,13 @@
         
         a {
             text-decoration: none;
-            color: $lime;
+            color: black;
             transition: 0.5s ease-in-out;
-            text-shadow: 5px 3px 13px #000000;
+            
 
             &:hover {
                 color: black;
-                text-shadow: 5px 3px 13px $green;
+                text-shadow: 5px 3px 13px $lime;
             }
         }
 

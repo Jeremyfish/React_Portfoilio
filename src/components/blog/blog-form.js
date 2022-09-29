@@ -10,6 +10,7 @@ export default class BlogForm extends Component {
         super(props);
 
         this.state = {
+            id: "",
             title: "",
             blog_status: "",
             content: "",
@@ -24,6 +25,16 @@ export default class BlogForm extends Component {
         this.componentConfig = this.componentConfig.bind(this) ;
         this.djsConfig = this.djsConfig.bind(this);
         this.handleFeaturedImageDrop = this.handleFeaturedImageDrop.bind(this);
+    }
+
+    UNSAFE_componentWillMount() {
+        if (this.props.editMode) {
+            this.setState({
+                id: this.props.blog.id,
+                title: this.props.blog.title,
+                status: this.props.blog.status
+            });
+        }
     }
 
     componentConfig() {
